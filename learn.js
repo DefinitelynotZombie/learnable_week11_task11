@@ -6,8 +6,9 @@ import RoomType from './roomType.js';
 import Room from './room.js';
 
 const app = express();
+bodyParser.urlencoded({ extended: true })
 const PORT = 3000;
-const MONGODB_URI = 'your-mongodb-uri';
+const MONGODB_URI = 'mongodb://localhost//hotelManagementSystem';
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
